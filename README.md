@@ -41,14 +41,7 @@ $ git submodule add https://github.com/tomanistor/osprey.git themes/osprey
 Then run:
 
 ```console
-$ git submodule init
-$ git submodule update
-```
-
-To update theme submodule, run:
-
-```console
-$ git submodule foreach git pull
+$ git submodule update --init --recursive --remote
 ```
 
 ## Configuration
@@ -86,9 +79,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"] # This theme does not currently use 
     cacheBustCSS = false
     cacheBustJS = false
     ajaxFormspree = true
-
-[permalinks]
-    gallery = "/" # Redirect gallery index to home page
 
 [[menu.main]]
     name = "About"
